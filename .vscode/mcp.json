@@ -1,0 +1,32 @@
+{
+  "inputs": [
+    {
+      "id": "ado-pat",
+      "type": "promptString",
+      "description": "Azure DevOps Personal Access Token (PAT)",
+      "password": true
+    },
+    {
+      "id": "ado-org-url",
+      "type": "promptString",
+      "description": "Azure DevOps Organization URL (e.g., https://dev.azure.com/myorg)"
+    },
+    {
+      "id": "ado-default-project",
+      "type": "promptString",
+      "description": "Default Azure DevOps project name (optional, press Enter to skip)"
+    }
+  ],
+  "servers": {
+    "azure-devops": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["${workspaceFolder}/dist/index.js"],
+      "env": {
+        "ADO_PAT": "${input:ado-pat}",
+        "ADO_ORG_URL": "${input:ado-org-url}",
+        "ADO_DEFAULT_PROJECT": "${input:ado-default-project}"
+      }
+    }
+  }
+}
