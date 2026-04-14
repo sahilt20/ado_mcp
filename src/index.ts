@@ -10,7 +10,7 @@ const config = loadConfig();
 const client = new AdoClient(config);
 
 const server = new McpServer({
-  name: 'azure-devops',
+  name: 'azure-devops-mcp',
   version: '1.0.0',
 });
 

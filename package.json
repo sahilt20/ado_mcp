@@ -1,11 +1,11 @@
 {
-  "name": "ado-mcp",
+  "name": "azure-devops-mcp",
   "version": "1.0.0",
   "description": "Azure DevOps MCP Server for GitHub Copilot — read-only access to Boards, Repos, Pipelines, Releases, Tests, and Wiki",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
-    "ado-mcp": "dist/index.js"
+    "azure-devops-mcp": "dist/index.js"
   },
   "scripts": {
     "build": "tsc",
